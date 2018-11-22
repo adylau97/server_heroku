@@ -1,0 +1,27 @@
+{
+  "name": "web_api_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.0.1",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "firebase": "^5.5.6",
+    "mongoose": "^5.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix app",
+    "start": "node server.js",
+    "dev": "concurrently \"npm run server\" \"npm run app\"",
+    "server": "nodemon server.js",
+    "app": "npm start --prefix app"
+  },
+  "author": "",
+  "license": "ISC"
+}
