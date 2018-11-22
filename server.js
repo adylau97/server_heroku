@@ -4,6 +4,7 @@ const apps = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const db = 'mongodb://adylau97:yitchin97@ds037498.mlab.com:37498/wallpaperdb';
+const port = process.env.PORT || 5000;
 
 var bodyParser = require('body-parser');   
 var Schema = mongoose.Schema;
@@ -17,8 +18,8 @@ apps.use(cors());
 apps.use(bodyParser.json({limit:'5mb'}));
 apps.use(bodyParser.urlencoded({extended:true, limit:'5mb'}));  
 
-apps.listen(5000, ()=>{
-  console.log('Connecting...');
+apps.listen(port, ()=>{
+  console.log(`Connecting Port ${port}...`);
 });
 
 apps.get('/getImage/:page/:q',(req,res)=>{
